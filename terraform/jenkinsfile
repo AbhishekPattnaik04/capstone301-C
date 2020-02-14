@@ -7,7 +7,7 @@ node {
    git 'https://github.com/AbhishekPattnaik04/capstone301-C.git'
   }
   
-def project_terra="terraform/ansible-deploy"
+def project_terra="terraform/"
 dir(project_terra) {
    stage('Prod Deployment on AWS'){
    sh label: 'terraform', script: '/bin/terraform  init'
