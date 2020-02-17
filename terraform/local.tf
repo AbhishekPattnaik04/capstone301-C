@@ -42,6 +42,7 @@ provisioner "local-exec" {
         echo "[jenkins-ci]"| tee -a jenkins-ci.ini;
         export ANSIBLE_HOST_KEY_CHECKING=False;
         echo "${aws_instance.backend.public_ip}" | tee -a jenkins-ci.ini;
+        sudo ansible-playbook -i /root/.jenkins/workspace/capstoneTerraform/terraform/jenkins-ci.ini -u ubuntu --key /root/.ssh/capstone301 /root/.jenkins/workspace/capstoneAnsible/ansible/web-playbook.yaml
     EOT
 }
 }
