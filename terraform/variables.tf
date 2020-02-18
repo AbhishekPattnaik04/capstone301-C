@@ -3,7 +3,7 @@ variable "key_name" {
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/capstone301"
+  default = "/var/lib/jenkins/.ssh/capstone301"
 }
 
 variable "sg-id" {
